@@ -1,0 +1,74 @@
+$width:40px;
+$height:55px;
+
+ul li{
+	list-type:none;
+	padding:0px;
+}
+ul{
+	padding:0px;
+}
+.toolbar{
+	width:$width;
+	height:100%;
+	background:#d73240;
+	margin:0 auto;
+}
+.toolbar-ul{
+	width:$width;
+}
+.toolbar-ul li ,.toolbar-ul .toolbar-column{
+	width:$width;
+    height:$height;
+    background-color:pink;
+    display:block;
+    margin-bottom:10px;
+    font-size:12px;
+    position:relative;
+}
+.toolbar-ul a{
+	background-image:url(../img/custom.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:20px;
+	&:hover{
+	background-color:rgba(0,0,0,0.7);
+	}
+}
+.toolbar-ul .toolbar-app{
+	background-image:url(../img/mobilephone.png)
+}
+.toolbar-ul .toolbar-offaccount{
+	background-image:url(../img/weixin.png)
+}
+.toolbar-ul li>div{
+	width:190px;
+	height:$height;
+	background:rgba(0,0,0,0.8);
+	position:absolute;
+	left:-190px;
+	top:0;
+}
+.toolbar-ul li .toolbar-app+div,.toolbar-ul li .toolbar-offaccount+div{
+	height:100px;
+}
+.toolbar-ul li .imgios,.imgand,.imgwechat{
+	width:66px;
+	height:66px;
+	background-color:white;
+	background-size:cover;
+	display:inline-block;
+	background-image:url(../img/IOs.png);
+	background-repeat:no-repeat;
+	background-position:center;
+
+}
+.toolbar-ul li .imgand{
+	background-image:url(../img/Android.png);
+}
+.toolbar-ul li .imgwechat{
+	background-image:url(../img/wechat.jpg)
+}
+
+
+

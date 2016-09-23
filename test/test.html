@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>testURL</title>
+</head>
+<script src='jquery.js'></script>
+<body>
+	<button>提交</button>
+</body>
+<script>
+	$('button').click(function(){
+		$.ajax({
+			url:''+new Date(),
+			type:'get',
+		})
+	})
+</script>
+</html>

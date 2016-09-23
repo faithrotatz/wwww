@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	div{
+		width:200px;
+		height:30px;
+		border: 1px solid black;
+		position: relative;
+	}
+	div ul {
+		position: absolute;
+		padding-top:15px;
+		padding-bottom:15px;
+		left:0;
+		top:30px;
+		display:none;
+		background:white;
+		box-shadow: 0 0 0 5px rgba(0,0,0,0.3);
+	}
+	div ul li{
+		width:200px;
+		line-height:30px;
+	    padding-left:30px;
+	}
+	div ul li input{
+		width:50px;
+		height:20px;
+	}
+	 
+</style>
+<body>
+	<div data='unitprice'><input type="text"></div>
+	<div data='totalprice'><input type="text"></div>
+	<div data='area'><input type="text"></div>
+</body>
+<script src='jquery.js'></script>
+<script src='pull.js'></script>
+<script>
+    $('div').each(function(i,obj){
+    	new Pullselect(obj);
+    })
+	
+	
+</script>
+</html>

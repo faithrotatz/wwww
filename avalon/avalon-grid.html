@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script src="http://cdn.bootcss.com/avalon.js/2.1.5/avalon.min.js"></script>
+<script>
+    avalon.define({
+        $id:'bodypage',
+        total:[1,2,3,4]
+    })
+    avalon.define({
+        $id:'test',
+        
+    })
+    avalon.component('ms-grid',{
+        template:'<div ms-controller="test"><table><tr ms-for="el in @total">{{el}}</tr></table></div>',
+        defaults:{
+            
+        }
+    })
+</script>
+<body>
+    <div ms-controller='bodypage'>
+        <xmp ms-widget='{is:"ms-grid"}'>
+            
+        </xmp>
+    </div>
+    <a href="www.111.com">222</a>
+</body>
+
+</html>

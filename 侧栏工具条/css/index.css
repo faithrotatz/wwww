@@ -1,0 +1,111 @@
+ul li {
+  list-type: none;
+  padding: 0px; }
+
+ul {
+  padding: 0px; }
+*{
+  box-sizing: border-box;
+}
+.toolbar {
+  width: 40px;
+  height: 100%;
+  background: #d73240;
+  position: fixed;
+  right:0; }
+
+.toolbar-ul {
+  width: 40px; }
+
+.toolbar-ul li, .toolbar-ul .toolbar-column {
+  width: 40px;
+  height: 55px;
+  
+  display: block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  position: relative; }
+
+.toolbar-ul a {
+  background-image: url(../img/custom.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px; }
+  .toolbar-ul a:hover {
+    background-color: rgba(0, 0, 0, 0.3); }
+
+.toolbar-ul .toolbar-app {
+  background-image: url(../img/mobilephone.png); }
+
+.toolbar-ul .toolbar-offaccount {
+  background-image: url(../img/weixin.png); }
+
+.toolbar-ul li > div {
+  width: 220px;
+  height: 55px;
+  background: rgba(0, 0, 0, 0.6);
+  
+  position: absolute;
+  left: -240px;
+  top: 0; 
+  -moz-transition:all 0.3s ease;
+  -o-transition:all 0.3s ease;
+  -webkit-transition:all 0.3s ease;
+  opacity: 0;
+  filter: alpha(opacity=0);
+   }
+.toolbar-ul li:hover .toolbar-div{
+  left:-190px;
+  opacity:1;
+  filter: alpha(opacity=1);
+}
+.toolbar-ul .toolbar-app+div,.toolbar-ul .toolbar-offaccount+div{
+  top:-22.5px;
+  padding-top:10px;
+  padding-left:30px;
+}
+
+.toolbar-ul li .toolbar-app + div, .toolbar-ul li .toolbar-offaccount + div {
+  height: 100px; }
+
+.toolbar-ul li .imgios, .imgand, .imgwechat {
+  width: 76px;
+  height: 86px;
+  
+  
+  background-size:66px;
+  display: inline-block;
+  background-image: url(../img/IOs.png);
+  background-repeat: no-repeat;
+  background-position: top left;
+  color: white;
+  padding-top:70px; }
+.imgios,.imgand{
+  float: left;
+  margin-right:10px;
+}
+.toolbar-ul li .imgand {
+  background-image: url(../img/Android.png); }
+
+.toolbar-ul li .imgwechat {
+  background-image: url(../img/wechat.jpg); }
+.toolbar-ul .toolbar-square{
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-left: 10px solid rgba(0,0,0,0.7);
+  border-bottom: 8px solid transparent;
+  position:absolute;
+  right:-10px;
+  top:50%;
+  margin-top:-8px;
+}
+.toolbar-ul .toolbar-customer+div span{
+ text-align: center;
+ line-height:55px;
+ color: white;
+ font-size:13px;
+ display: block;
+}
+/*# sourceMappingURL=index.css.map */

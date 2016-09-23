@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script src="http://cdn.bootcss.com/avalon.js/2.0s/avalon.min.js"></script>
+<style>
+    .dd{
+        color:red;
+    }
+    p{width: 100%;line-height: 50px;background: #cccccc}
+</style>
+<body ms-controller="test">
+    <button ms-click="@toggle=!@toggle">点我</button>
+    <p  ms-if="@toggle">{{@a}}</p>
+    <p  ms-text="@b" ms-hover="@bbb"></p>
+    <p ms-click="@check" ms-click-1="@check1">{{@str}}----</p>
+    <ul>
+        <!-- ms-for:el in @brr -->
+        <li ms-for="(key,value) in @arr">
+
+            <p ms-click="@llop(key,$event)">{{key}}--{{value}}</p>
+            <input type="text" ms-duplex="@arr[key]"/>
+
+        </li>
+        <!-- ms-for-end: -->
+    </ul>
+
+    <div ms-controller="aa">
+      <span ms-attr="{aa:@path}"></span>
+
+    </div>
+</body>
+<script>
+   var vm= avalon.define({
+        $id:'test',
+        a:'1',
+        b:'2',
+        bbb:'dd',
+        aaa:'这是隐藏的内容',
+        toggle:false,
+        arr:['aa','ccc','xx','vvv'],
+        brr:['1',2,3,4],
+        str:'',
+        check:function(e){
+         vm.str= e.type;
+         console.log(this.a)
+        },
+        check1:function(e){
+              console.log(e.vmodel)
+             alert('111')
+        },
+        llop:function(el,e){
+            vm.str=el;
+            alert(e.target)
+            console.log(vm.$model)
+        }
+    })
+    avalon.define({
+        $id:'aa',
+        obj:{title:'普通',align:'left'},
+        path:'1111',
+        width: 111,
+        height:222,
+        bbb:'dd'
+    })
+</script>
+</html>

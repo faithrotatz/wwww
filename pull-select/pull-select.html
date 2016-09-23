@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<style media="screen">
+  ul{
+    list-style-type: none;
+  }
+  .pull-select div{
+   box-shadow: 0 0 5px rgba(0,0,0,0.5);
+   overflow: hidden;
+   width: 200px;
+  }
+  .pull-select div>ul{
+   width:135px;
+   background: white;
+   float: left;
+   padding: 0;
+  }
+  .pull-select div>ul li{
+  	width:100%;
+  	line-height:30px;
+  	padding-left: 15px;
+  	box-sizing: border-box;
+    
+  }
+  .pull-select div>ul li:hover{
+  	cursor: pointer;
+  	background: #3281fd;
+  	color: white;
+  }
+</style>
+<body>
+  <div type='tradingArea' class='pull-select'>
+     
+  </div>
+  <input type="date">
+</body>
+<script src='jquery.js'></script>
+<script src='pull-select.js'></script>
+<script>
+	var  a=new Infopullselect('div');
+    
+</script>
+</html>
